@@ -271,11 +271,11 @@ section {
 }
 
 .navbar-right li.active a {
-  background-color: #149E5B;
+  background-color: #0C4B7A;
   color:white;
 }
 .navbar-right a.active {
-  background-color: #149E5B;
+  background-color: #0C4B7A;
   color:white;
 }
 .navbar-brand h1 {
@@ -994,7 +994,7 @@ ul.address {
 }
 
 #footer .social-icons ul li a {
-  background-color: #149E5B;
+  background-color: #0C4B7A;
   border-radius: 4px;
   line-height: 33px;
 }
@@ -1036,7 +1036,7 @@ ul.address {
 }
 
 #about-social-icons .social-icons ul li a {
-  background-color: #149E5B;
+  background-color: #0C4B7A;
   border-radius: 4px;
   line-height: 33px;
 }

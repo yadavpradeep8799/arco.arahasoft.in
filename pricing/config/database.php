@@ -1,6 +1,5 @@
 	<?php
 //ais server db credentials//
-<
  $serverName = "127.0.0.1";
  $username = "root";
  $password = "D0tv1k0pt1ma#123";
@@ -23,7 +22,7 @@ $conn = new mysqli($serverName, $username, $password, $database);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-
+}
 
 // Check connection
 if (mysqli_connect_errno()) {
