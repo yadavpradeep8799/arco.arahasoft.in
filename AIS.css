@@ -353,12 +353,12 @@ body {
 ::-moz-selection {
   /* Code for Firefox */
   color: white;
-  background: #1c3d89;
+  background: #0C4B7A;
 }
 
 ::selection {
   color: white;
-  background: #1c3d89;
+  background: #0C4B7A;
 }
 
 .right {
@@ -453,7 +453,7 @@ body {
 .cards-text:nth-of-type(1):hover ~ .underbar {
   left: 0;
   width: 70%;
-  background: #1c3d89;
+  background: #0C4B7A;
   opacity: 0.8;
   text-align: center;
   margin-left: 50px;
@@ -462,7 +462,7 @@ body {
 .cards-text:nth-of-type(2):hover ~ .underbar {
   left: 50px;
   width: 40px;
-  background: #c86464;
+  background: #149E5B;
 }
 
 .cards-text:nth-of-type(3):hover ~ .underbar {
@@ -659,7 +659,7 @@ fieldset {
   left: 50%;
   bottom: -0.0625rem;
   position: absolute;
-  background: #337ab7;
+  background: #0C4B7A;
   -webkit-transition: left 0.28s ease, width 0.28s ease;
   transition: left 0.28s ease, width 0.28s ease;
   z-index: 2;
@@ -725,7 +725,7 @@ fieldset {
 .form-group select:focus ~ .control-label,
 .form-group input:focus ~ .control-label,
 .form-group textarea:focus ~ .control-label {
-  color: #337ab7;
+  color: #0C4B7A;
 }
 
 .form-group select:focus ~ .bar::before,
@@ -791,12 +791,12 @@ fieldset {
 .radio .helper::after {
   -webkit-transform: scale(0);
   transform: scale(0);
-  background-color: #337ab7;
-  border-color: #337ab7;
+  background-color: #0C4B7A;
+  border-color: #0C4B7A;
 }
 
 .radio label:hover .helper {
-  color: #337ab7;
+  color: #0C4B7A;
 }
 
 .radio input:checked ~ .helper::after {
@@ -805,7 +805,7 @@ fieldset {
 }
 
 .radio input:checked ~ .helper::before {
-  color: #337ab7;
+  color: #0C4B7A;
 }
 
 .checkbox {
@@ -832,7 +832,7 @@ fieldset {
   position: absolute;
   height: 0;
   width: 0.2rem;
-  background-color: #337ab7;
+  background-color: #0C4B7A;
   display: block;
   -webkit-transform-origin: left top;
   transform-origin: left top;
@@ -859,11 +859,11 @@ fieldset {
 }
 
 .checkbox label:hover .helper {
-  color: #337ab7;
+  color: #0C4B7A;
 }
 
 .checkbox input:checked ~ .helper {
-  color: #337ab7;
+  color: #0C4B7A;
 }
 
 .checkbox input:checked ~ .helper::after,
@@ -890,7 +890,7 @@ fieldset {
 
 .has-error .legend.legend,
 .has-error.form-group .control-label.control-label {
-  color: #d9534f;
+  color: #149E5B;
 }
 
 .has-error.form-group .form-help,
@@ -901,11 +901,11 @@ fieldset {
 .has-error.radio .helper,
 .has-error.form-radio .form-help,
 .has-error.form-radio .helper {
-  color: #d9534f;
+  color: #149E5B;
 }
 
 .has-error .bar::before {
-  background: #d9534f;
+  background: #149E5B;
   left: 0;
   width: 100%;
 }
@@ -952,7 +952,7 @@ fieldset {
 }
 
 .button:hover {
-  color: #337ab7;
+  color: #0C4B7A;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12),
     0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
@@ -1119,7 +1119,7 @@ li {
 }
 
 li a {
-  color: rgb(197, 39, 39);
+  color: rgb(20, 158, 91);
 }
 
 .phone li {
@@ -1386,7 +1386,7 @@ li a {
   margin-right: 8px;
 }
 #footer .social-icons ul li a {
-  background-color: #c52727;
+  background-color: #149E5B;
   border-radius: 4px;
   line-height: 33px;
 }
@@ -1575,7 +1575,7 @@ a:hover {
   text-decoration: none;
 }
 .price-table .fa-check {
-  color: #dc3545;
+  color: #149E5B;
 }
 .price-table .fa-times {
   color: #d8d6e3;
@@ -1590,7 +1590,7 @@ a:hover {
   text-transform: uppercase;
 }
 .price-table tr.price-table-head {
-  background-color: #dc3545;
+  background-color: #149E5B;
   color: #ffffff;
 }
 .price-table td.price {
@@ -1601,7 +1601,7 @@ a:hover {
   font-family: "Montserrat";
 }
 .price-table td.price a {
-  background-color:#dc3545;
+  background-color:#149E5B;
   text-decoration: none;
   color: white;
   padding: 12px 32px;
@@ -1635,7 +1635,7 @@ a:hover {
   font-family: "Montserrat";
   font-family: "slick";
   font-size: 6px;
-  color: #dc3545;
+  color: #149E5B;
   text-transform: uppercase;
   font-size: 12px;
   padding: 12px 48px;
@@ -1648,7 +1648,7 @@ a:hover {
 
 .price-table svg {
   width: 90px;
-  fill: #dc3545;
+  fill: #149E5B;
 }
 
 /* table panel end */
@@ -1974,7 +1974,7 @@ and (max-width: 800px)  {
   }
   .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
-    color: #dc3545;
+    color: #149E5B;
     height: 23px;
     font-size: x-small;
   }
@@ -2455,7 +2455,7 @@ button:hover {
   cursor: pointer;
 }
 button.button {
-  background-color:#bb0b0b;
+  background-color:#149E5B;
   text-decoration: none;
   color: white;
   padding: 12px 32px;
@@ -2468,7 +2468,7 @@ button.button {
   border-radius: 64px;
 }
 button.button:hover {
-  border-bottom: #bb0b0b 1px solid;
+  border-bottom: #149E5B 1px solid;
   color: white;
 }
 
@@ -2991,7 +2991,7 @@ margin-left: -633px;
 
 /* line 29, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-top .single-footer-caption .footer-number h4 {
-  color: #C52727;
+  color: #149E5B;
   font-size: 30px;
   font-weight: 500;
   text-transform: capitalize;
@@ -3092,7 +3092,7 @@ margin-left: -633px;
 
 /* line 102, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-top .single-footer-caption .info.error {
-  color: #C52727;
+  color: #149E5B;
 }
 
 /* line 105, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -3132,12 +3132,12 @@ margin-left: -633px;
 
 /* line 133, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom .footer-copy-right p i {
-  color: #C52727;
+  color: #149E5B;
 }
 
 /* line 136, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
 .footer-area .footer-bottom .footer-copy-right p a {
-  color: #C52727;
+  color: #149E5B;
 }
 
 /* line 150, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_footer.scss */
@@ -3268,7 +3268,7 @@ margin-left: -633px;
 /* line 47, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .header-area .header-top .header-info-left ul li i {
   margin-right: 8px;
-  color: #C52727;
+  color: #149E5B;
 }
 
 /* line 56, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
@@ -3306,7 +3306,7 @@ margin-left: -633px;
   display: inline-block;
   position: relative;
   z-index: 1;
-  color:#bb0b0b;
+  color:#149E5B;
 }
 .header-area .header-sticky.sticky-bar .main-menu nav > ul > li,
 .header-area .header-sticky.sticky-bar .main-menu nav > ul > li > a{
@@ -3314,7 +3314,7 @@ color:#0d2d3e;
 }
 /* line 85, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .main-header .main-menu ul li a {
-  color: #bb0b0b;
+  color: #149E5B;
   font-weight: 400;
   padding: 39px 19px;
   display: block;
@@ -3337,7 +3337,7 @@ color:#0d2d3e;
 
 /* line 99, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .main-header .main-menu ul li:hover > a {
-  color: #bb0b0b;
+  color: #149E5B;
 }
 
 /* line 104, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
@@ -3350,7 +3350,7 @@ color:#0d2d3e;
   position: absolute;
   /* width: 30vh; */
   width: 42vh;
-  background: #bb0b0b;
+  background: #149E5B;
   left: 0;
   top: 90%;
   visibility: hidden;
@@ -3415,7 +3415,7 @@ color:#0d2d3e;
 
 /* line 172, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_headerMenu.scss */
 .header-area .header-top .header-info-right .header-social a:hover i {
-  color: #C52727;
+  color: #149E5B;
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -3521,7 +3521,7 @@ color: white;
 color: #fff ;
 font-weight: 400 ;
 padding: 9px 19px !important;
-background: #bb0b0b ;
+background: #149E5B ;
 border-radius: 2px;
 
 }
@@ -3579,7 +3579,7 @@ color: #fff !important;
 .section-divider {
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, #bb0b0b);
+  background: linear-gradient(to right, #149E5B);
   margin: 0 auto;
   border-radius: 2px;
 }
@@ -3633,7 +3633,7 @@ color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #bb0b0b
+  background: linear-gradient(135deg, #149E5B
 );
   color: white;
   border-radius: 50%;
@@ -3680,7 +3680,7 @@ color: #fff !important;
 
 /* Gallery Button */
 .gallery-btn {
-  background: linear-gradient(to right,  #bb0b0b,  #bb0b0b);
+  background: linear-gradient(to right,  #149E5B,  #149E5B);
   color: white;
   border: none;
   padding: 12px 30px;
@@ -3809,12 +3809,12 @@ font-weight: bold;
 
 /* Green card */
 .green-card {
-  background: linear-gradient(to bottom right,  #bb0b0b);
+  background: linear-gradient(to bottom right,  #149E5B);
 }
 
 /* Dark card */
 .dark-card {
-  background-color:  #bb0b0b;
+  background-color:  #149E5B;
 }
 
 .service-card h3 {
@@ -3938,7 +3938,7 @@ width: 200px;
 }
 
 .form-button {
-  background-color: #bb0b0b;
+  background-color: #149E5B;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -4036,7 +4036,7 @@ width: 200px;
 }
 
 .text-content .highlight {
-  color:  #bb0b0b;
+  color:  #149E5B;
   font-weight: 600;
 }
 
@@ -4103,13 +4103,13 @@ width: 200px;
   }
   
   .section-heading .highlight {
-    color: #bb0b0b;
+    color: #149E5B;
   }
   
   .heading-divider {
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #bb0b0b);
+    background: linear-gradient(90deg, #149E5B);
     margin: 0 auto 20px;
     border-radius: 2px;
   }
@@ -4155,12 +4155,12 @@ width: 200px;
   .feature1-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border-color: #bb0b0b;
+    border-color: #149E5B;
   }
   
   .feature1-card i {
     font-size: 2.5rem;
-    color: #bb0b0b;
+    color: #149E5B;
     margin-bottom: 20px;
     display: block;
   }
@@ -4194,7 +4194,7 @@ width: 200px;
   }
   
   .benefit-icon {
-    color: #bb0b0b;
+    color: #149E5B;
     font-size: 1.3rem;
     padding-top: 3px;
     flex-shrink: 0;
@@ -4280,7 +4280,7 @@ width: 200px;
     /* .intro-section::before {
       width: 400px;
       height: 400px; */
-      /* background: #bb0b0b; */
+      /* background: #149E5B; */
       /* top: -100px;
       left: -100px;
     } */
@@ -4307,7 +4307,7 @@ width: 200px;
       font-size: 48px;
       font-weight: 700;
       margin-bottom: 20px;
-      color: #bb0b0b;
+      color: #149E5B;
     }
 
     .intro-subtitle {
@@ -4356,7 +4356,7 @@ width: 200px;
 
 
   .sweet-alert button {
-    background-color: #bb0b0b !important;
+    background-color: #149E5B !important;
     color: white;
     border: 0;
     box-shadow: none;

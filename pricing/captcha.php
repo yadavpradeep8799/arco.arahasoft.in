@@ -23,9 +23,9 @@ $company = $_POST['Company'];
 $role = $_POST['Role'];
 $contact = $_POST['Contact'];
 $company_address = $_POST['CompanyAddress'];
-$demo_for = "AIS";
+$demo_for = "Arco Compliance";
 $demodate = $_POST['Date'];
-$subject = "Regarding Demo For AIS";
+$subject = "Regarding Demo For Arco Compliance";
 
     //  $captcha=$_POST['captcha'];
     //  echo $captcha;        
