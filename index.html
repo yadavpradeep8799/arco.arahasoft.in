@@ -1,0 +1,2875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AIS </title>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+    <link rel="shortcut icon" href="./assets/mainfavicon.png" />
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.css">
+
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js"></script>
+
+    
+<!-- SlickNav CSS -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" /> -->
+
+<!-- SlickNav JS -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script> -->
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./AIS.css">
+    <link rel="stylesheet" href="./AIS2.css">
+    <link rel="stylesheet" href="./assets/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/owl/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+    <!-- datepicker styles -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+    
+
+    <style>
+      .mt-3 {
+    margin-top: 6rem !important;
+}
+        .nav-pills .nav-link .btnhover {
+
+            border: 0;
+            border-radius: .25rem;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .ttm-topbar-wrapper .top-contact.text-left li:not(:last-child):before {
+            content: "";
+            height: 18px;
+            width: 1px;
+            background-color: rgba(255, 255, 255, .09);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 3px;
+        }
+
+        .topbar-right .top-contact li:before {
+            content: "";
+            height: 18px;
+            width: 1px;
+            background-color: rgba(255, 255, 255, .09);
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 3px;
+        }
+
+        .btn-outline-danger:hover {
+            color: #dc3545;
+        }
+
+        /* css for querybox */
+
+        .cmplogo {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50px;
+            position: relative;
+            z-index: 1;
+            margin: 0 20px 0 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        /* header,
+        .win_close,
+        .emtpg_btn em,
+        [themeid="9"] header::after,
+        [themeid="10"] header::after,
+        .buble_bg .msgbx,
+        .siqc_edt .wincustom_bg {
+            background-image: -webkit-linear-gradient(90deg, rgb(220, 53, 69) 0%, rgb(220, 53, 69) 100%) !important;
+            background-image: -moz-linear-gradient(90deg, rgb(220, 53, 69) 0%, rgb(220, 53, 69) 100%) !important;
+            background-image: -ms-linear-gradient(90deg, rgb(220, 53, 69) 0%, rgb(220, 53, 69) 100%) !important;
+        } */
+
+        .zsiq_theme1 .zsiq_flt_rel {
+            position: relative;
+            padding: 3px;
+            width: 60px;
+            border-radius: 60px;
+            height: 60px;
+            font-size: 14px;
+            line-height: 100%;
+            background-color: rgb(220, 53, 69) !important;
+        }
+
+        .zsiq_theme1 .zsiq_user.siqicon {
+            background-color: rgb(220, 53, 69) !important;
+        }
+
+
+        /* Audit Management Portals Section */
+.audit-portal {
+  background: #f9fbfd;
+  padding: 60px 20px;
+
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.audiCs {
+  font-size: 16px;
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.portal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-top: 6px solid #2c3e50;
+  text-align: center;
+  height: 100%;
+  position: relative;
+}
+
+.portal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.portal-card .icon-wrap {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px auto;
+  background: linear-gradient(135deg, #bb0b0b, #e74c3c);
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(187, 11, 11, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.portal-card:hover .icon-wrap {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.portal-card h5 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.portal-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 767.98px) {
+  .portal-card {
+    margin-bottom: 30px;
+  }
+}
+
+    </style>
+    <script type="text/javascript">
+        var $zoho = $zoho || {}; $zoho.salesiq = $zoho.salesiq ||
+            { widgetcode: "9e5c163cbee2c4ec6a43df8f701db0073344defef33d68e73dba5646f28b7d042c6e97d225f1f0e2bf1eb523b5b88945", values: {}, ready: function () { } };
+        var d = document; s = d.createElement("script"); s.type = "text/javascript"; s.id = "zsiqscript"; s.defer = true;
+        s.src = "https://salesiq.zoho.in/widget"; t = d.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); d.write("<div id='zsiqwidget'></div>");
+    </script>
+</head>
+
+
+<body>
+
+
+    <!-- this is for click and slide show ais Admin panel starts here  -->
+    <div style="position: fixed;z-index: 100;background-color: #0e0e0fa3;width:100%;text-align: center;display: none;"
+        class="pop-up-image">
+        <div class="pop_image">
+            <div class="container" style="margin-top:-50px">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./assets/AIS Admin Panel Screens/Frame_1.png"
+                                alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/AIS Admin Panel Screens/Frame_2.png"
+                                alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/AIS Admin Panel Screens/Frame_3.png"
+                                alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/AIS Admin Panel Screens/Frame_4.png"
+                                alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/AIS Admin Panel Screens/Frame_5.png"
+                                alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/AIS Admin Panel Screens/Frame_6.png"
+                                alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div><i class="bi bi-x-lg"
+                        style="top: 17px;position: absolute;right: 131px;background-color: white;width: 35px;height: 35px;border-radius: 50%;"
+                        onclick="closethis()"></i></div>
+            </div>
+        </div>
+    </div>
+    <!-- this is for click and slide show ais Admin panel ends here  -->
+
+    <!-- Ais reports panel starts here -->
+    <div style="position: fixed;z-index: 100;background-color: #0e0e0fa3;width:100%;text-align: center;display: none;"
+        class="pop-up-image-report">
+        <div class="pop_image">
+            <div class="container" style="margin-top:-50px">
+                <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators1" data-slide-to="6"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="./assets/AIS IMGG/Frame_1.png" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/AIS IMGG/Frame_2.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/AIS IMGG/Frame_3.png" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/AIS IMGG/Frame_4.png" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/AIS IMGG/Frame_5.png" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="./assets/AIS IMGG/Frame_6.png" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+                <div><i class="bi bi-x-lg"
+                        style="top: 17px;position: absolute;right: 131px;background-color: white;width: 35px;height: 35px;border-radius: 50%;"
+                        onclick="closethis1()"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ais reports panel ends here -->
+
+    <!-- navbar stars -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="http://www.dotvik.com/home">
+            <img class="img-responsive" src="./assets/logo_website_new.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end navbar-style " id="navbarSupportedContent">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="http://www.dotvik.com/">HOME<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.dotvik.com/product">PRODUCTS</a>
+            </li>
+            <li class="nav-item dropdown" style="background-color: #db0306;">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="color:#fff ;">
+                    SOLUTIONS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"
+                        href="http://www.dotvik.com/solutions/enterprise-sales-solutions">Enterprise Sales</a>
+                    <a class="dropdown-item" href="http://www.dotvik.com/solutions/enterprise-gst-solutions">Enterprise
+                        GST</a>
+                    <a class="dropdown-item" href="http://www.dotvik.com/solutions/healthcare-solutions">Health-Care</a>
+                    <a class="dropdown-item" href="http://www.dotvik.com/solutions/mobility-solutions">Mobility </a>
+                    <a class="dropdown-item"
+                        href="http://www.dotvik.com/solutions/ecommerce-and-social-solutions">ECommerce & Social</a>
+                    <a class="dropdown-item" href="http://www.dotvik.com/solutions/iot-solutions">IOT</a>
+                    <a class="dropdown-item" href="#AIS.html">AIS</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.dotvik.com/aboutus">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.dotvik.com/client">CLIENTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.dotvik.com/contactus">CONTACT</a>
+            </li>
+        </div>
+    </nav> -->
+
+
+    <header style="margin-top: -2%;background-color:#f5f5f7;">
+        <!-- Header Start -->
+        <div class="header-area" style="padding-top: 11px;">
+          <div class="main-header">
+         
+            <div class="header-bottom header-sticky">
+              <div class="container">
+                <div class="row align-items-center">
+                  <!-- Logo -->
+                  <div class="col-xl-2 col-lg-2 LogCol">
+                    <div class="logo">
+                      <a href="http://www.dotvik.com/"
+                        ><img src="assets/dotvik_invert.svg" style="width: 87%;" class="whiteLogo" alt=""
+                      />
+                      <img src="assets/dotvik.svg" style="width: 87%;" class="darkLogo" alt=""
+                      /></a>
+                    </div>
+                  </div>
+                  <div class="col-xl-10 col-lg-10">
+                    <div
+                      class="menu-wrapper d-flex align-items-center justify-content-end"
+                    >
+                      <!-- Main-menu -->
+                      <div class="main-menu d-none d-lg-block">
+                        <nav>
+                          <ul id="navigation">
+                            <li style="margin-right: 11px; font-size: 16px;">Services <i class="fa-solid fa-caret-down"></i>
+                              <ul class="submenu" >
+                                  <li><a href="https://dotvik.com/digital-transformation-service">Digital Transformation</a></li>
+                                  <li><a href="https://dotvik.com/digital-enterprise-consulting-service">Digital enterprise consulting</a></li>
+    
+                              </ul>
+                            </li>
+    
+                            <li style="margin-right: 11px; font-size: 16px;">Products <i class="fa-solid fa-caret-down"></i>
+                              <ul class="submenu" >
+                                  <li><a href="https://dotvik.com/xmw-low-code-platform">XMW </a></li>
+                                  <li><a href="https://dotvik.com/dotcatalogue-product-catalog-management">DotCatalogue</a></li>
+                              </ul>
+                            </li>
+    
+                            <li style="margin-right: 11px; font-size: 16px;"> Optima Connect <i class="fa-solid fa-caret-down"></i>
+                              <ul class="submenu" >
+                                  <li><a href="https://dotvik.com/optima-connect-for-dealer">Optima Connect Dealer</a></li>
+                                  <li><a href="https://dotvik.com/optima-connect-for-employees">Optima Connect Employee</a></li>
+                              </ul>
+                            </li>
+    
+                            <!-- <li style="margin-right: 11px; font-size: 16px;">Industries <i class="fa-solid fa-caret-down"></i>
+                              <ul class="submenu">
+                                <li><a href="consumer-electronics-management-solution">FMEG</a></li>
+                                <li>
+                                  <a href="wire-and-cables">Wire & Cables</a>
+                                </li>
+                                <li>
+                                  <a href="b2bcommerce-and-retail-softaware">B2B Commerce & Retail</a>
+                                </li>
+                                <li>
+                                  <a href="on-demand-custom-mobility-solutions"
+                                    >Custom Mobility Solutions</a
+                                  >
+                                </li>
+                              </ul>
+                            </li> -->
+                            <li><a href="https://dotvik.com/about-us">About Us</a></li>
+                            <li><a class="contactBtn" href="https://dotvik.com/contactUs">Contact</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Mobile Menu -->
+                  <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Header End -->
+      </header>
+      
+
+
+    <!-- hero slider -->
+    <div id="fullBody">
+
+
+        <section class="hero d-none d-md-block nav_top" >
+            <div class="slider container slide_margin">
+                <div>
+                    <div class="row" style="margin-top: 70px;">
+                        <div class="col-md-7 cssView" style="margin-top: -56px;">
+                            <p style="margin-left: -117px; margin-top: 70px;" class=" hero-heading1">
+                                <img src="./assets/op_ais svg new.svg" style="margin-left: 77px; width: 85%;">
+                            </p>
+                            <!-- <p class=" hero-heading2"></p> -->
+                            <br>
+                            <div class="hero-para1">
+                                <ul>
+                                    <li><i class="bi bi-chevron-double-right"></i>Modernize auditing operations</li>
+                                    <li><i class="bi bi-chevron-double-right"></i>Uphold compliance standards</li>
+                                    <li><i class="bi bi-chevron-double-right"></i>Decision Ready Data</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="col-md-5" style=" margin-left: -35px;">
+                            <div class="slider siderView">
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-1.png" alt="9-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-2.png" alt="1-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-3.png" alt="2-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-4.png" alt="3-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-5.png" alt="4-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-6.png" alt="5-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-7.png" alt="6-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-8.png" alt="7-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-9.png" alt="8-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-10.png" alt="8-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                                <div><img src="./assets/AIS MOBILE SCREEN/frame-11.png" alt="8-01-01.png"
+                                        class="img-fluid float-right h_c phoneImg"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- hero slider phone -->
+        <div class="cssResponsive">
+            <div class="carousel slide carousel-fade hero d-sm-block d-xs-block d-md-none d-lg-none d-xl-none mt-2">
+                <!-- <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-1.png" alt="First slide"></div> -->
+
+                <div id="carouselIndicators" class="owl-carousel owl-theme ">
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-1.png"
+                            alt="First slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-2.png"
+                            alt="First slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-3.png"
+                            alt="Second slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-4.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-5.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-6.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-7.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-8.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-9.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-10.png"
+                            alt="Third slide"></div>
+                    <div><img class="d-block w-50 d-block mx-auto" src="./assets/AIS MOBILE SCREEN/frame-11.png"
+                            alt="Third slide"></div>
+                </div>
+            </div>
+            <div class="PhoneCarousel-caption">
+                <p style="margin-left: -117px;" class=" hero-heading1">
+                    <img src="./assets/op_ais svg new.svg"
+                        style="margin-left: 115px;padding-top:-115px; width: -webkit-fill-available;;">
+                </p>
+                <ul class="AuditLi">
+                    <li><i class="bi bi-chevron-double-right"></i>Modernize Auditing Operations.</li>
+                    <li><i class="bi bi-chevron-double-right"></i>Uphold Compilance Standards.
+                    </li>
+                    <li><i class="bi bi-chevron-double-right"></i>Decision Ready Data.</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+       
+<!-- introduction section -->
+
+  <section class="intro-section">
+    <div class="intro-container">
+      <h1 class="intro-title">Optima AIS<br><span style="color:#2c3e50">(Audit Information System)</span></h1>
+      <!-- <p class="intro-subtitle">Modernize Auditing Operations • Uphold Compilance Standards • Decision Ready Data </p> -->
+      <p class="intro-description">
+     Developed for auditors affiliated with Certification Bodies and Accreditation Providers, Optima AIS (Audit Information System) implements digital audit execution across desktop and mobile platforms. 
+     Empowering seamless, paperless audits from planning and scheduling to reporting, it tracks and ensures compliances, enhances efficiency, and modernizes the way audits are conducted.
+      </p>
+  
+    </div>
+  </section>
+
+
+  <!-- who benifits  -->
+
+<section class="dotvik-section">
+  <div class="dotvik-container">
+    <!-- Main Heading -->
+    <div class="section-heading">
+      <h2>Who Benefits from <span class="highlight">Optima AIS?</span></h2>
+      <div class="heading-divider"></div>
+      <p class="subheading">Discover how our solutions empower different industries and teams</p>
+    </div>
+
+    <div class="dotvik-layout">
+      <!-- Left Column - Features -->
+      <div class="features-column">
+         <div class="feature1-card">
+          <i class="fas fa-building"></i>
+          <h3>Centralized system for managing Certification audits</h3>
+        </div>
+        <div class="feature1-card">
+          <i class="fas fa-sync-alt"></i>
+          <h3>Robust Reporting & Analytics</h3>
+        </div>
+        <div class="feature1-card">
+          <i class="fas fa-code"></i>
+          <h3>Developed for Auditors</h3>
+        </div>
+        <div class="feature1-card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Customer Support</h3>
+        </div>
+        <div class="feature1-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Seamless Audit execution/workflows on Mobile, Tablet & Desktop</h3>
+        </div>
+        <div class="feature1-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Configurable Audit Design and Scheduling</h3>
+        </div>
+      </div>
+
+      <!-- Right Column - Benefits and Form -->
+      <div class="content-column">
+        <div class="benefits-box">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="benefit-text">
+              <p>ISO Certification Bodies and Accreditation Providers.</p>
+            </div>
+          </div>
+          <!-- <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <div class="benefit-text">
+              <p>This information system audits software can be useful for every IT & Security Team.</p>
+            </div>
+          </div> -->
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="benefit-text">
+              <p>Enabling affiliated auditors to swiftly </p>
+              <ul>
+                <li>Conduct Audits</li>
+                <li>Process Auditees</li>
+                <li>Produce Results</li>
+              </ul>
+            </div>
+          </div>
+
+
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="benefit-text">
+              <p>Regulated Sectors such as financial, medical and industrial sectors making conformances to standard operations their main goal.</p>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+
+ <!-- features section desktop -->
+<section class="features-section py-5 d-none d-md-block">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <span class="section-subtitle">Components</span>
+      <h2 class="section-title">Admin Panel</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Features Cards -->
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <h3 class="card-title">Audit Management</h3>
+        <p class="card-description">Manage Auditors and auditees as well as audit scheduling and assignment</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3 class="card-title">Standards and Clauses Management</h3>
+        <p class="card-description">Add clauses from standards to your checklists.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+
+            <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <h3 class="card-title">MIS and Reports</h3>
+        <p class="card-description">Identify and track compliances and non-compliances through audit responses.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div></div>
+
+      <!-- Card 3 -->
+      <!-- <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-clipboard-check"></i>
+        </div>
+        <h3 class="card-title">Audit Management</h3>
+        <p class="card-description">Manage Standards, Clauses, locations, Auditors as well as audit scheduling and assignment.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div> -->
+
+      <!-- Card 4 -->
+       <div></div>
+
+    </div>
+
+    <!-- Gallery Button -->
+    <div class="text-center mt-5">
+      <button class="gallery-btn" data-toggle="modal" data-target="#mobile_Gallery1">
+        <i class="fas fa-images"></i> View Admin Panel Gallery
+      </button>
+    </div>
+  </div>
+</section>
+
+      <!-- Mobile Application Section -->
+<section class="features-section mobile-app-section py-5 d-none d-md-block">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <!-- <span class="section-subtitle">Auditor Features</span> -->
+      <h2 class="section-title">Auditor Panel</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Features Cards -->
+    <div class="features-grid">
+      <!-- Card 1 -->
+      <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h3 class="card-title">Audit Execution</h3>
+        <p class="card-description">Run audits either through desktop, Tablet or mobile application.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+        <h3 class="card-title">Multimedia File Submission</h3>
+        <p class="card-description">Submit files as responses.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <!-- Card 3 -->
+      <!-- <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <h3 class="card-title">Audit Execution</h3>
+        <p class="card-description">Run audits either through desktop, Tablet or mobile application.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div> -->
+
+      <!-- Card 4 -->
+       <!-- <div></div>
+      <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-archive"></i>
+        </div>
+        <h3 class="card-title">Audit Archive</h3>
+        <p class="card-description">Access both current and archived audits with complete details.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+        <div></div> -->
+    </div>
+
+    <!-- Gallery Button -->
+    <div class="text-center mt-5">
+      <button class="gallery-btn" data-toggle="modal" data-target="#mobile_Gallery">
+        <i class="fas fa-mobile-alt"></i> View Auditor Panel Gallery
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Report Panel Section -->
+<section class="features-section report-panel-section py-5 d-none d-md-block">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header text-center">
+      <!-- <span class="section-subtitle">Auditee Features</span> -->
+      <h2 class="section-title">Auditee Panel</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Features Cards -->
+    <div class="features-grid">
+      <!-- Card 1 -->
+       <div></div>
+      <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <h3 class="card-title">Audit Execution</h3>
+        <p class="card-description">Submit responses to pre-defined checklists.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div></div>
+  
+
+      <!-- Card 2 -->
+      <!-- <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <h3 class="card-title">Audit Summary</h3>
+        <p class="card-description">Get a complete overview of all audit activities.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div> -->
+
+      <!-- Card 3 -->
+      <!-- <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3 class="card-title">Evidence Review</h3>
+        <p class="card-description">Examine and validate all collected audit evidence.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div> -->
+
+      <!-- Card 4 -->
+    
+      <!-- <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        <h3 class="card-title">Departmental Charts</h3>
+        <p class="card-description">Visualize performance metrics across departments.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div></div> -->
+
+      <!-- Card 5 -->
+      <!-- <div class="feature-card">
+        <div class="card-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 class="card-title">Clause Charts</h3>
+        <p class="card-description">Detailed analysis of compliance with specific clauses.</p>
+        <a href="#" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div> -->
+       <!-- <div></div> -->
+
+    <!-- Gallery Button -->
+     <div></div>
+    <div class="text-center mt-5">
+      <button class="gallery-btn" data-toggle="modal" data-target="#Gallery_modal">
+        <i class="fas fa-chart-area"></i> View Auditee Panel Gallery
+      </button>
+    </div>
+  </div>
+</section>
+
+
+        <!-- modals for feature panels -->
+
+
+        <div class="modal fade modal-fullscreen-lg" id="mobile_Gallery1" tabindex="-1" role="dialog" aria-labelledby="mobile_Gallery1Title"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+
+                <!-- Modal content-->
+                <div class="modal-content admin_portal">
+                    <div class="modal-header" style="background-color: whitesmoke;">
+                        <h4 class="modal-title">Admin Panel's Gallery</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            style="background-color: red;">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <!-- <form style="background-image: url(./assets/features_background.jpg);"> -->
+                        <div class="col-md-6 hidden-sm hidden-xs mart30 text-center">
+                            <!-- Carousel -->
+                            <div id="demo1" class="carousel slide" data-bs-interval="500000">
+
+                                <!-- Indicators/dots -->
+                                <div class="carousel-indicators" style="display: none">
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="3"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="4"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="5"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="6"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="7"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="8"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="9"></button>
+                                    <button type="button" data-bs-target="#demo1" data-bs-slide-to="10"></button>
+                                </div>
+
+                                <!-- The slideshow/carousel -->
+                                <div class="carousel-inner admin_p">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/AIS Admin Panel Screens/Frame_1.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS Admin Panel Screens/Frame_2.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS Admin Panel Screens/Frame_3.png" alt="" class="d-block"
+                                            style="width:100%">
+                                     
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS Admin Panel Screens/Frame_4.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS Admin Panel Screens/Frame_5.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS Admin Panel Screens/Frame_6.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls/icons -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#demo1"
+                                    data-bs-slide="prev" style="margin-left: -31px;background: white;">
+                                    <span class="carousel-control-prev-icon" style="background-color: black;"></span>
+                                </button>
+                                <button class="carousel-control-next mr" type="button" data-bs-target="#demo1"
+                                    data-bs-slide="next" style="margin-right: -680px;background: white;">
+                                    <span class="carousel-control-next-icon" style="background-color: black;"></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 
+<!- Modal -->
+        <div class="modal fade" id="mobile_Gallery" tabindex="-1" role="dialog" aria-labelledby="mobile_GalleryTitle"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+
+                <!-- Modal content-->
+                <div class="modal-content mobile_portal">
+                    <div class="modal-header" style="background-color: whitesmoke;">
+                        <h4 class="modal-title">Auditor Panel's Gallery</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            style="background-color: red;">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+                        <!-- <form style="background-image: url(./assets/features_background.jpg);"> -->
+                        <div class="col-md-6 hidden-sm hidden-xs mart30 text-center">
+                            <!-- Carousel -->
+                            <div id="demo" class="carousel slide" data-bs-interval="500000">
+
+                                <!-- Indicators/dots -->
+                                <div class="carousel-indicators" style="display: none">
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="6"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="7"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="8"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="9"></button>
+                                    <button type="button" data-bs-target="#demo" data-bs-slide-to="10"></button>
+                                </div>
+
+                                <!-- The slideshow/carousel -->
+                                <div class="carousel-inner mob_pan">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-1.png" alt="" class="d-block"
+                                            style="width:100%">
+                                        
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-2.png" alt="" class="d-block"
+                                            style="width:100%">
+                                       
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-3.png" alt="" class="d-block"
+                                            style="width:100%">
+                                        
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-4.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-5.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-6.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-7.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-8.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-9.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-10.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS MOBILE SCREEN/frame-11.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls/icons -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#demo"
+                                    data-bs-slide="prev" style="margin-left: -31px; background: white;">
+                                    <span class="carousel-control-prev-icon" style="background-color: black;"></span>
+                                </button>
+                                <button class="carousel-control-next mr" type="button" data-bs-target="#demo"
+                                    data-bs-slide="next" style="margin-right: -680px; background: white;">
+                                    <span class="carousel-control-next-icon" style="background-color: black;"></span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade " id="Gallery_modal" tabindex="-1" role="dialog" aria-labelledby="Gallery_modalTitle"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+
+                <!-- Modal content-->
+                <div class="modal-content report_portal">
+                    <div class="modal-header" style="background-color: whitesmoke;">
+                        <h4 class="modal-title">Auditee Panel's Gallery</h4>
+                        <button type="button" class="close" data-dismiss="modal"
+                            style="background-color: red;">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="col-md-6 hidden-sm hidden-xs mart30 text-center">
+
+                            <div id="demo2" class="carousel slide" data-bs-interval="500000">
+
+                                <!-- Indicators/dots -->
+                                <div class="carousel-indicators" style="display: none">
+                                    <button type="button" data-bs-target="#demo2" data-bs-slide-to="0"
+                                        class="active"></button>
+                                    <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#demo2" data-bs-slide-to="2"></button>
+                                    <button type="button" data-bs-target="#demo2" data-bs-slide-to="3"></button>
+                                    <button type="button" data-bs-target="#demo2" data-bs-slide-to="4"></button>
+                                    <button type="button" data-bs-target="#demo2" data-bs-slide-to="5"></button>
+
+                                </div>
+
+                                <!-- The slideshow/carousel -->
+                                <div class="carousel-inner report_pan">
+                                    <div class="carousel-item active">
+                                        <img src="./assets/AIS IMGG/Frame_1.png" alt="" class="d-block"
+                                            style="width:100%">
+                                        
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS IMGG/Frame_2.png" alt="" class="d-block"
+                                            style="width:100%">
+                                        
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS IMGG/Frame_2.png" alt="" class="d-block"
+                                            style="width:100%">
+                                        <!-- <p>Slide3</p> -->
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS IMGG/Frame_3.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS IMGG/Frame_4.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="./assets/AIS IMGG/Frame_5.png" alt="" class="d-block"
+                                            style="width:100%">
+                                    </div>
+                                </div>
+
+                                <!-- Left and right controls/icons -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#demo2"
+                                    data-bs-slide="prev" style="margin-left: -31px; background: white;">
+                                    <span class="carousel-control-prev-icon" style="background-color: black;"></span>
+                                </button>
+                                <button class="carousel-control-next mr" type="button" data-bs-target="#demo2"
+                                    data-bs-slide="next" style="margin-right: -680px; background: white;">
+                                    <span class="carousel-control-next-icon" style="background-color: black;"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        
+<!-- services in west india -->
+
+<section class="uae-trusted-section">
+ <div class="trusted-row">
+    <div class="logo-badge">
+      <!-- <img src="./assets/country icons/auditinglogo.webp" alt="MOE Approved" /> -->
+    
+    </div>
+
+    <div class="text-content">
+      <h2>
+       Optima AIS <strong>Trusted Partner</strong><br />
+       In <span class="highlight">Middle East</span>
+      </h2>
+      <!-- <p class="subtitle">The optimal path to financial freedom</p> -->
+    </div>
+  </div>
+
+  <div class="emirates-list">
+    <div class="emirate"><img src="./assets/country icons/1.webp" /><span>Bahrain</span></div>
+    <div class="emirate"><img src="./assets/country icons/5.webp" /><span>Qatar</span></div>
+    <div class="emirate"><img src="./assets/country icons/2.webp" /><span>Iran</span></div>
+    <div class="emirate"><img src="./assets/country icons/3.webp" /><span>Iraq</span></div>
+    <div class="emirate"><img src="./assets/country icons/4.webp" /><span>Jordan</span></div>
+    <div class="emirate"><img src="./assets/country icons/5.webp" /><span>Kuwait</span></div>
+    <div class="emirate"><img src="./assets/country icons/1.webp" /><span>United Arab Emirates</span></div>
+    <div class="emirate"><img src="./assets/country icons/6.webp" /><span>Lebanon</span></div>
+    <div class="emirate"><img src="./assets/country icons/7.webp" /><span>Oman</span></div>
+    <div class="emirate"><img src="./assets/country icons/3.webp" /><span>Saudi Arabia</span></div>
+  </div>
+</section>
+
+
+        <!-- beyond audit section -->
+<!-- <section class="audit-portal">
+  <div class="container-fluid  py-5">
+    <h2 class="section-title text-center mb-2">Audit Management Portals</h2>
+    <p class="audiCs text-center mb-5">Admin, Auditor, and Auditee access with secure file submission.</p>
+
+    <div class="row justify-content-center gx-4 gy-4 px-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="portal-card">
+          <div class="icon-wrap"><i class="fas fa-user-shield"></i></div>
+          <h5>Admin Portal</h5>
+          <p>Manage users, assign audits, configure workflows, and track compliance.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="portal-card">
+          <div class="icon-wrap"><i class="fas fa-user-check"></i></div>
+          <h5>Auditor Portal</h5>
+          <p>Review audit responses, raise issues, communicate, and generate reports.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="portal-card">
+          <div class="icon-wrap"><i class="fas fa-user-edit"></i></div>
+          <h5>Auditee Portal</h5>
+          <p>Respond to tasks, upload documents, and collaborate efficiently.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="portal-card">
+          <div class="icon-wrap"><i class="fas fa-file-upload"></i></div>
+          <h5>Document Submission</h5>
+          <p>Upload audit files, manage history, and ensure proof of compliance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ -->
+
+  
+
+
+
+
+
+
+<!-- Scroll-Revealed Form -->
+<form class="scroll-form" id="consultForm" py-5 d-none d-md-block">
+  <div class="form-group">
+    <label><i class="icon">👤</i>Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+  </div>
+  <div class="divider"></div>
+
+  <div class="form-group">
+    <label><i class="icon">📧</i>Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+  </div>
+  <div class="divider"></div>
+
+  <div class="form-group phone-group">
+    <label><i class="icon">📱</i>Phone</label>
+    <div class="phone-input-wrapper">
+     <select class="isd-select" id="isd" name="isd"></select>
+      <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required pattern="[0-9]{7,15}" />
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="form-group">
+    <label><i class="icon">🏢</i>Company</label>
+    <input type="text" id="company" name="company" placeholder="Enter your company name" required />
+  </div>
+
+  <button class="form-button" type="button" id="openformSave">
+    <span>Book a Consultation</span> ↗
+  </button>
+</form>
+
+
+<script>
+
+$(document).ready(function() {
+    $("#openformSave").click(function() {
+        openformSave();
+    });
+});
+
+function openformSave() {
+    $("#openformSave").prop("disabled", true);
+
+    setTimeout(function () {
+        $("#openformSave").prop("disabled", false);
+    }, 1000);
+
+    var name = $("#name").val().trim();
+    var email = $("#email").val().trim();
+    var isd = $("#isd").val().trim();
+    var phone = $("#phone").val().trim();
+    var company = $("#company").val().trim();
+
+    if (name === "" || email === "" || phone === "" || company === "") {
+        swal("Error", "Please fill all fields", "error");
+        return;
+    }
+
+    $.post("pricing/openformSave.php", {
+        name: name,
+        email: email,
+        isd: isd,
+        phone: phone,
+        company: company
+    },
+    function (data) {
+        data = data.trim();
+
+        if (data === "Success") {
+            swal({
+                title: "Thank You!",
+                text: "Your consultation has been successfully registered. Our team will connect with you shortly.",
+                type: "success"
+            }, function () {
+                location.reload();
+            });
+
+        } else if (data === "Mail Error" || data === "Mail Exception") {
+            swal({
+                title: "Saved, but...",
+                text: "We received your form, but failed to send confirmation email. We’ll still get in touch with you.",
+                type: "warning"
+            });
+
+        } else if (data === "DB Error") {
+            swal({
+                title: "Error!",
+                text: "Something went wrong while saving your data. Please try again.",
+                type: "error"
+            });
+
+        } else {
+            swal({
+                title: "Oops!",
+                text: "Unexpected error: " + data,
+                type: "error"
+            });
+        }
+    });
+}
+
+
+
+
+function validateForm() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const company = document.getElementById("company").value.trim();
+
+  if (name === "" || email === "" || phone === "" || company === "") {
+    alert("Please fill out all fields.");
+    return false;
+  }
+
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/i;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email.");
+    return false;
+  }
+
+  return true; 
+}
+
+
+
+// Country data (put the full list here)
+const countries = [
+  { name: "India", code: "+91", flag: "🇮🇳" },
+  { name: "United Arab Emirates", code: "+971", flag: "🇦🇪" },
+  { name: "United States", code: "+1", flag: "🇺🇸" },
+  { name: "United Kingdom", code: "+44", flag: "🇬🇧" },
+  { name: "Australia", code: "+61", flag: "🇦🇺" },
+  { name: "Canada", code: "+1", flag: "🇨🇦" },
+  { name: "Germany", code: "+49", flag: "🇩🇪" },
+  { name: "France", code: "+33", flag: "🇫🇷" },
+  { name: "Japan", code: "+81", flag: "🇯🇵" },
+  { name: "China", code: "+86", flag: "🇨🇳" },
+  { name: "Singapore", code: "+65", flag: "🇸🇬" },
+  { name: "South Africa", code: "+27", flag: "🇿🇦" },
+  { name: "Brazil", code: "+55", flag: "🇧🇷" },
+  { name: "Russia", code: "+7", flag: "🇷🇺" },
+  { name: "Mexico", code: "+52", flag: "🇲🇽" }
+];
+
+const select = document.getElementById("isd");
+
+countries.forEach(country => {
+  const option = document.createElement("option");
+  option.value = country.code;
+  option.textContent = `${country.flag} ${country.code}`;
+  select.appendChild(option);
+});
+</script>
+
+
+
+
+        <!-- features section phone -->
+        <section style=" background: #FAFAFA;"
+            class="py-5 d-sm-block d-xs-block d-md-none d-lg-none d-xl-none container ">
+            <div class="feature-text "><br><br> Components</div>
+
+            <div class="row">
+                <div class="col-4">
+                    <button class="nav-link btn mx-auto  btn-outline-danger w-100 mt-5 active badge  text-wrap"
+                        id="adminPhone" onclick="adminPanel()">Admin Panel</button>
+                </div>
+                <div class="col-4">
+                    <button class="nav-link btn mx-auto  btn-outline-danger w-100 mt-5 badge text-wrap"
+                        id="mobilePhoneApp" onclick="MobileClick()">Auditor Panel</button>
+                </div>
+                <div class="col-4">
+                    <button class="nav-link btn mx-auto  btn-outline-danger w-100 mt-5 badge text-wrap"
+                        id="reportsPhonePanel" onclick="reportsPanel()">Auditee Panel</button>
+                </div>
+
+                <div class="col-12 mt-3" id="mobile_tab">
+                    <!-- Mobile Admin panel starts-->
+                    <div class="row m_hide_admin ">
+                        <div class="col-12 text-center">
+                            <div id="admin_slider_mobile" class="owl-carousel owl-theme">
+                                <div class="item"><img src="./assets/AIS Admin Panel Screens/Frame_1.png"
+                                        alt="AIS Admin Panel" class="img-fluid float-right"></div>
+                                <div class="item"><img src="assets/AIS Admin Panel Screens/Frame_2.png"
+                                        alt="AIS Admin Panel" class="img-fluid float-right"></div>
+                                <div class="item"><img src="assets/AIS Admin Panel Screens/Frame_3.png"
+                                        alt="AIS Admin Panel" class="img-fluid float-right"></div>
+                                <div class="item"><img src="assets/AIS Admin Panel Screens/Frame_4.png"
+                                        alt="AIS Admin Panel" class="img-fluid float-right"></div>
+                                <div class="item"><img src="assets/AIS Admin Panel Screens/Frame_5.png"
+                                        alt="AIS Admin Panel" class="img-fluid float-right"></div>
+                                <div class="item"><img src="assets/AIS Admin Panel Screens/Frame_6.png"
+                                        alt="AIS Admin Panel" class="img-fluid float-right "></div>
+                            </div>
+                        </div>
+                        <hr> <br>
+                        <div class="col-12 bg-light mt-3" style="margin-left: -8px;">
+                            <div  style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); border-radius: 15px;padding-top: 10px;background-color:snow ">
+                                <!-- <div  style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);border-radius: 15px;margin-top: -10px;    padding-bottom: 7px; background-color:whitesmoke">
+                                <div style="margin-left: 137px;">
+                                    <img src="assets/Features_bg/icons8-system-administrator-male-96.png" alt="">
+                                </div>
+                            </div> -->
+                                
+                                <h5 style="margin-left: 30px;padding-top: 20px;"><strong>Dashboards for easy
+                                        view</strong></h5>
+                                <ul>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Audits</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Scheduled audits</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> questions</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Plants</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Departments</li>
+                                    <li style="margin-left: 22px;padding-bottom: 15px;"><i class="fa fa-check"></i> Location</li>
+                                </ul>
+                            </div>
+
+                            
+                            <div style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); border-radius: 15px; padding-top: 10px;background-color:snow">
+                                <!-- <div  style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);border-radius: 19px;margin-top: -10px;padding-bottom: 7px; background-color:whitesmoke; width:fit-content;">
+                                <div style="margin-left: 137px;margin-left: 34px;margin-right: 55px;">
+                                    <img src="assets/Features_bg/icons8-system-administrator-male-96.png" alt="">
+                                </div>
+                                </div> -->
+                                <h5 style="margin-left: 30px;padding-top: 20px;"><strong>Location Management</strong>
+                                </h5>
+                                <ul>
+
+                                    <h6 style="padding-top: 12px;font-weight: inherit;"><strong
+                                            style="font-weight: 500;">View, Add or Remove</strong></h6>
+                                    <li style="margin-left: 22px;"><i class=" fa fa-check"></i> Plant location</li>
+                                    <li style="margin-left: 22px;padding-bottom: 15px;"><i class="fa fa-check"></i> Department location</li>
+                                    <!-- <li><i class="fa fa-check"></i> View, Add or Remove Plant Location </li>
+                                <li><i class="fa fa-check"></i> View, Add or Remove department location</li> -->
+
+                                </ul>
+                            </div>
+
+                           
+                            <div style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); border-radius: 15px; padding-top: 10px; background-color:snow">
+                                <!-- <div style="margin-left: 18px;">
+                                    <img src="assets/Features_bg/icons8-system-administrator-male-96.png" alt="">
+                                </div> -->
+                                <h5 style="margin-left: 30px;padding-top: 20px;"><strong>Audit management</strong></h5>
+                                <ul>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Audit Creation</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Add question set to
+                                        audits</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Audit Assignment</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Toggle audit status</li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Edit and archive audits
+                                    </li>
+                                    <li style="margin-left: 22px;padding-bottom: 15px;"><i class="fa fa-check"></i> Audit Scheduling</li>
+                                </ul>
+                            </div>
+                            <div
+                                style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); border-radius: 15px;padding-top: 10px; background-color:snow">
+                                <!-- <div style="margin-left: 18px;">
+                                    <img src="assets/Features_bg/icons8-system-administrator-male-96.png" alt="">
+                                </div> -->
+                                <h5 style="margin-left: 30px;padding-top: 20px;"><strong>MIS and Reports</strong></h5>
+                                <ul>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Overall Audit Summary
+                                    </li>
+                                    <li style="margin-left: 22px;"><i class="fa fa-check"></i> Departmental Charts</li>
+                                    <li style="margin-left: 22px;padding-bottom: 15px;"><i class="fa fa-check"></i> Clause Charts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Admin Panel Ends -->
+                    <!-- Mobile app  -->
+                    <div class="row hide_mobile_app " style="display:none;">
+                        <div class="col-12 text-center">
+                            <div id="ais_auditing_mobile" class="owl-carousel owl-theme">
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-1.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-2.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-3.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-4.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-5.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-6.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-7.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-8.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-9.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-10.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                                <div class="item"><img src="./assets/AIS MOBILE SCREEN/frame-11.png"
+                                        class="img-fluid m_h_control phoneView" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3" style="margin-left: -8px;">
+                            <div style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); border-radius: 15px;padding-top: 10px;background-color:snow">
+                                <!-- <div style="margin-left: 18px;">
+                                    <img src="assets/Features_bg/icons8-mobile-application-96.png" alt="" style="width: 110px;">
+                                </div> -->
+                                <p class="lead1" style="margin-left: 35px; padding-top: 20px;"> <i
+                                        class="fa fa-check"></i>Assign auditee from user list</p>
+                                <p class="lead1" style="margin-left: 35px;"> <i
+                                        class="fa fa-check"></i> Check and manage status of in - progress Audits
+                                </p>
+                                <p class="lead1" style="margin-left: 35px;"> <i
+                                        class="fa fa-check"></i>Audit execution</p>
+                                <p class="lead1" style="margin-left: 35px;    padding-bottom: 15px;"> <i
+                                        class="fa fa-check"></i>View details of available as well as archived
+                                    audit
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile App -->
+                    <!-- Mobile report panel -->
+                    <div class="row report_panel" style="display:none;">
+                        <div class="col-12 text-center">
+                            <div id="reports_slide_mobile" class="owl-carousel owl-theme">
+                                <div id="item"><img src="./assets/AIS IMGG/Frame_1.png" class="img-fluid ais_img "
+                                        alt="AIS IMGG">
+                                </div>
+                                <div id="item"><img src="./assets/AIS IMGG/Frame_2.png" class="img-fluid ais_img "
+                                        alt="AIS IMGG">
+                                </div>
+                                <div id="item"><img src="./assets/AIS IMGG/Frame_3.png" class="img-fluid ais_img "
+                                        alt="AIS IMGG">
+                                </div>
+                                <div id="item"><img src="./assets/AIS IMGG/Frame_4.png" class="img-fluid ais_img "
+                                        alt="AIS IMGG">
+                                </div>
+                                <div id="item"><img src="./assets/AIS IMGG/Frame_5.png" class="img-fluid ais_img "
+                                        alt="AIS IMGG">
+                                </div>
+                                <div id="item"><img src="./assets/AIS IMGG/Frame_6.png" class="img-fluid ais_img "
+                                        alt="AIS IMGG">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3" style="margin-left: -8px;">
+                            <div
+                                style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12); border-radius: 15px;padding-top: 10px;background-color:snow">
+                                <!-- <div style="margin-left: 18px;">
+                                    <img src="assets/Features_bg/icons8-statistics-report-96.png" alt="">
+                                </div> -->
+                                
+                                
+                                <p class="lead1" style="margin-left: 35px; padding-top:20px;"> <i
+                                        class="fa fa-check"></i> Generate and view reports </p>
+                                <p class="lead1" style="margin-left: 35px;"> <i
+                                        class="fa fa-check"></i> Overall Audit Summary</p>
+                                <p class="lead1" style="margin-left: 35px;"> <i
+                                        class="fa fa-check"></i> Departmental Charts</p>
+                                <p class="lead1" style="margin-left: 35px;"> <i
+                                        class="fa fa-check"></i> Clause Charts</p>
+                                <p class="lead1" style="margin-left: 35px;    padding-bottom: 15px;"> <i
+                                        class="fa fa-check"></i> Evidence Reviewer</p>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <!-- Mobile Report Panel Ends -->
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--Pricing plan panel-->
+   <section class="ptable">
+            <br>
+            <div class="feature-text " style="color:white;font-family: 'Times New Roman', Times, serif;"><br><br> 
+              Pricing Tiers Tailored To Match Your Goals</div>
+<br>   
+<br>
+
+
+
+            <div class="main">
+
+        <br>
+                <table
+                    style="border-color: #e8e0d673;
+                border-top-color: rgba(232, 224, 214, 0.45); 
+                border-right-color: rgba(232, 224, 214, 0.45);
+                border-bottom-color: rgba(232, 224, 214, 0.45);
+                border-left-color: rgba(232, 224, 214, 0.45);
+                border-style: solid;
+                border-top-style: solid;
+                border-right-style: solid;
+                border-bottom-style: solid;
+                border-left-style: solid;
+                border-width: 1px;
+                border-top-width: 1px;
+                border-right-width: 1px;
+                border-bottom-width: 1px;
+                border-left-width: 1px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);background-color: #f9f9f9;"
+                    id="pricingPlan" class="price-table">
+                    <thead>
+                        <!-- <tr class="price-table-head">
+                            <th>
+                            </th>
+                            <th style="text-align: center;">
+                                SILVER
+
+                            </th>
+                            <th style="text-align: center;">
+                                GOLD
+
+                            </th>
+                            <th style="text-align: center;">
+                                PLATINUM
+
+                            </th>
+                        </tr> -->
+                        <tr style="border-color: #e8e0d673;
+                        border-top-color: rgba(232, 224, 214, 0.45); 
+                        border-right-color: rgba(232, 224, 214, 0.45);
+                        border-bottom-color: rgba(232, 224, 214, 0.45);
+                        border-left-color: rgba(232, 224, 214, 0.45);
+                        border-style: solid;
+                        border-top-style: solid;
+                        border-right-style: solid;
+                        border-bottom-style: solid;
+                        border-left-style: solid;
+                        border-width: 1px;
+                        border-top-width: 1px;
+                        border-right-width: 1px;
+                        border-bottom-width: 1px;
+                        border-left-width: 1px;background-color: #f9f9f9;">
+                            <th style="border-color: #e8e0d673;
+                            border-top-color: rgba(232, 224, 214, 0.45); 
+                            border-right-color: rgba(232, 224, 214, 0.45);
+                            border-bottom-color: rgba(232, 224, 214, 0.45);
+                            border-left-color: rgba(232, 224, 214, 0.45);
+                            border-style: solid;
+                            border-top-style: solid;
+                            border-right-style: solid;
+                            border-bottom-style: solid;
+                            border-left-style: solid;
+                            border-width: 1px;
+                            border-top-width: 1px;
+                            border-right-width: 1px;
+                            border-bottom-width: 1px;
+                            border-left-width: 1px;background-color: #f9f9f9;">
+                                           <!-- Currency Selector -->
+                            <div class="currency-selector">
+                              <select id="currencyDropdown" class="form-control" disabled>
+                                <option value="INR">India (₹ INR)</option>
+                                <option value="USD">United States / North America ($ USD)</option>
+                                <option value="EUR">Europe (€ EUR)</option>
+                                <option value="GBP">United Kingdom (£ GBP)</option>
+                                <option value="SGD">Asia-Pacific (S$ SGD)</option>
+                                <option value="AED">Middle East (د.إ AED)</option>
+                                <option value="ZAR">Africa (R ZAR)</option>
+                              </select>
+                            </div>
+        </div>
+                                <!-- <div class="buttonWebShow">
+                                    <span class="material-symbols-outlined"
+                                        style="transform: rotateX(180deg); margin-left: 130px; color: black;">switch_access_shortcut</span>
+                                    <p class="saveupto"
+                                        style="margin-top: -53px;margin-left: 154px;font-weight: initial;  color: #0060ff;">
+                                        save up to <span id="discountVal"></span></p>
+                                </div>
+                                <div class="slideToggle" style="margin-left: -34px;margin-top: -13px;">
+                                    <div class="form-switch">
+                                        <p class="beforeinput text-success" style="margin-right: 41px;">
+                                            MONTHLY
+                                        </p>
+                                        <input class="form-check-input switch " id="js-contcheckbox" type="checkbox"
+                                            role="switch" style="margin-left: 88px;margin-top: -37px;" checked>
+                                        <p class="afterinput ">
+                                            ANNUALLY
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="buttonMobileShow">
+                                    <span class="material-symbols-outlined" style="
+                                            transform: rotateY(180deg);
+                                            color: black;
+                                            margin-left: 52px;
+                                            margin-bottom: 36px;
+                                          ">switch_access_shortcut</span>
+                                    <p class="saveuptoA" style="margin-top: -41px;margin-left: 180px;  color: #0060ff;">
+                                        save up to <span id="discountValCa"></span></p>
+                                </div> -->
+
+                             
+
+
+
+                            </th>
+                            <th class="price" style="color:black;text-align: center;
+                            border-color: #e8e0d673;
+                            border-top-color: rgba(232, 224, 214, 0.45); 
+                            border-right-color: rgba(232, 224, 214, 0.45);
+                            border-bottom-color: rgba(232, 224, 214, 0.45);
+                            border-left-color: rgba(232, 224, 214, 0.45);
+                            border-style: solid;
+                            border-top-style: solid;
+                            border-right-style: solid;
+                            border-bottom-style: solid;
+                            border-left-style: solid;
+                            border-width: 1px;
+                            border-top-width: 1px;
+                            border-right-width: 1px;
+                            border-bottom-width: 1px;
+                            border-left-width: 1px;background-color: #f9f9f9;" id="freeVal">
+                            </th>
+                            <th class="price" style="color:black;text-align: center;
+                            border-color: #e8e0d673;
+                            border-top-color: rgba(232, 224, 214, 0.45); 
+                            border-right-color: rgba(232, 224, 214, 0.45);
+                            border-bottom-color: rgba(232, 224, 214, 0.45);
+                            border-left-color: rgba(232, 224, 214, 0.45);
+                            border-style: solid;
+                            border-top-style: solid;
+                            border-right-style: solid;
+                            border-bottom-style: solid;
+                            border-left-style: solid;
+                            border-width: 1px;
+                            border-top-width: 1px;
+                            border-right-width: 1px;
+                            border-bottom-width: 1px;
+                            border-left-width: 1px;background-color: #f9f9f9;" id="silverVal">
+                            </th>
+                            <th class="price" style="color:black;text-align: center;
+                            border-color: #e8e0d673;
+                            border-top-color: rgba(232, 224, 214, 0.45); 
+                            border-right-color: rgba(232, 224, 214, 0.45);
+                            border-bottom-color: rgba(232, 224, 214, 0.45);
+                            border-left-color: rgba(232, 224, 214, 0.45);
+                            border-style: solid;
+                            border-top-style: solid;
+                            border-right-style: solid;
+                            border-bottom-style: solid;
+                            border-left-style: solid;
+                            border-width: 1px;
+                            border-top-width: 1px;
+                            border-right-width: 1px;
+                            border-bottom-width: 1px;
+                            border-left-width: 1px;background-color: #f9f9f9;" id="goldVal">
+                            </th>
+                            <th class="price" style="color:black;text-align: center;" id="platinumVal">
+                              
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="datatable" width="100%" height="100" style="background-color: white;">
+                      
+                    </tbody>
+                    <tfooter>
+                      
+                        <tr style="margin-bottom: -16px;">
+                            <td class="price" style="text-align: center;">
+                                <!-- <button class="button price" onclick="btnshow()">Register For Demo</button> -->
+                                <button type="button" class=" button price" style="color:white" data-toggle="modal"
+                                    data-target="#exampleModalLong">
+                                    Register For
+                                    Demo
+                                </button>
+                            </td>
+                        </tr>
+                    </tfooter>
+                </table>
+            </div>
+        </section>
+
+
+
+
+    </div>
+
+
+    <footer id="footer" >
+        <!--? Footer Start-->
+        <!-- Brand Area Start -->
+        <div class="brand-area ">
+          <div class="container">
+            <div class="brand-active brand-border pb-25 ">
+              <div class="single-brand">
+                <img src="assets/brands/brand1.png" alt="" width="40%" height="20%" style="margin-top :10px;"/>
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand2.png" alt="" width="40%" height="20%"/>
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand3.png" alt="" width="40%" height="20%" />
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand4.png" alt="" width="40%" height="20%" style="margin-top :30px;"/>
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand5.png" alt="" width="40%" height="20%" style="margin-top :20px;"/>
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand6.png" alt="" width="60%" height="20%" style="margin-top :30px;"/>
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand7.png" alt="" width="40%" height="20%" />
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand8.png" alt="" width="40%" height="20%"  />
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand9.png" alt="" width="40%" height="20%" style="margin-top :30px;" />
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand10.png" alt="" width="60%" height="20%" style="margin-top :30px;" />
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand11.png" alt="" width="60%" height="20%" style="margin-top :30px;"/>
+              </div>
+              <div class="single-brand">
+                <img src="assets/brands/brand12.png" alt="" width="60%" height="20%" style="margin-top :30px;"/>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Brand Area End -->
+        <div
+          class="footer-area section-bg"
+        >
+          <div class="container">
+            <div class="footer-top footer-padding">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="footer-social text-center">
+                    <a href="mailto:contact@dotvik.com"
+                      ><i class="fa-solid fa-envelope"></i
+                    ></a>
+                    <a href="https://www.facebook.com/Dotvik/"
+                      ><i class="fa-brands fa-facebook"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/company/dotviksolutions/"
+                      ><i class="fa-brands fa-linkedin"></i
+                    ></a>
+                    <a href="privacypolicy.php"
+                       style="font-size:16px;">| Privacy Policy</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-lg-12 text-center">
+                  <div class="footer-copy-right">
+                    <p>
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                      Copyright &copy;
+                      <script>
+                        document.write(new Date().getFullYear());
+                      </script>
+                      by
+                      <a href="https://www.dotvik.com/" target="_blank"
+                        >Dotvik Solutions Pvt. Ltd.</a
+                      >
+                      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!--Footer-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <!-- Modal content-->
+            <div class="modal-content demo_form">
+                <div class="modal-header">
+                    <h4 class="modal-title">Request Demo Form</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="Firstname">First name</label>
+                                <input type="text" class="form-control" id="Firstname" placeholder="First name"
+                                    name="Firstname" value="" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="Lastname">Last name</label>
+                                <input type="text" class="form-control" id="Lastname" placeholder="Last name"
+                                    name="Lastname" value="" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="Email">Email</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    <input type="email" class="form-control" id="Email" name="Email" placeholder="Email"
+                                        aria-describedby="inputGroupPrepend" value="" required>
+                                    <div class="invalid-feedback">
+                                        Please choose a Email.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="Company">Company</label>
+                                <input type="text" class="form-control" id="Company" placeholder="Company"
+                                    name="Company" value="" required>
+
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="Role">Role</label>
+                                <input type="text" class="form-control" id="Role" placeholder="Role" name="Role"
+                                    value="" required>
+
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="Contact">Contact No.</label>
+                                <input type="text" class="form-control" id="Contact" placeholder="Contact No."
+                                    name="Contact" value="" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid contact number.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-8">
+                                <label for="CompanyAddress">Company Address</label>
+                                <input type="text" class="form-control" id="CompanyAddress"
+                                    placeholder="Company Address" name="CompanyAddress" value="" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid contact number.
+                                </div>
+                            </div>
+                            <div class='col-sm-4  mb-3'>
+                                <label for="Date">Date</label>
+                                <div class="datepicker date input-group">
+                                    <input type="text" placeholder="Choose Date" class="form-control" id="Date"
+                                        name="Date" value="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="margin-top: 15px;">
+                            <!-- <div class='col-sm-4  mb-3' style="display: flex;">
+
+                                <img src="pricing/generate_captcha.php" class="captcha" id="captcha_id"
+                                    style="width:92%; height:89%;">
+                                <input  id="errormsg" value="<?php  echo $error_msg;?>" style="display: none; "/> 
+                                <a href="#"
+                                    onclick="$('#captcha_id').attr('src', './pricing/generate_captcha.php?t=' + new Date().getTime());"><img
+                                        src="./pricing/captcha_refresh.png" style="margin-top: 17px;"></a>
+                            </div>
+                            <div class='col-sm-4  mb-3'>
+                                <input type="text" name="captcha" id="captcha" class="form-control"
+                                    style="padding-top: 30px;" />
+
+                            </div> -->
+                            <div class='col-sm-4  mb-3'>
+                                <div>
+                                    <button type="button" id="submitbtn"
+                                        style="background-color: #C52727; color: white; width: 49%;border: none;height: 44px; border-radius: 3px;   margin-left: 372px; margin-top: 10px;"
+                                        onclick="SubmitFormData()">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div> -->
+    </div>
+
+    <!-- </div> -->
+    <!-- </div>
+
+    </div> -->
+
+
+
+    <script>
+
+
+        function SubmitFormData() {
+            setTimeout(function () {
+                document.getElementById("submitbtn").disabled = false;
+            }, 1000);
+            var Firstname = $("#Firstname").val();
+            var Lastname = $("#Lastname").val();
+            var Email = $("#Email").val();
+            var Company = $("#Company").val();
+            var Role = $("#Role").val();
+            var Contact = $("#Contact").val();
+            var CompanyAddress = $("#CompanyAddress").val();
+            var Date = $("#Date").val();
+           // var captcha = $("#captcha").val();
+
+            $.post("pricing/captcha.php", {
+                Firstname: Firstname, Lastname: Lastname, Email: Email,
+                Company: Company, Role: Role, Contact: Contact, CompanyAddress: CompanyAddress, Date: Date
+            },
+            function (data) {
+                    if (data == "Success") {
+
+                        swal({
+                            title: "Thank You!",
+                            text: "Your demo has been successfully registered.We will send you a reminder 24 hours before the scheduled date and time of the Demo",
+                            confirmButtonColor: '#e50150',
+                            type: "success"
+                        },
+                            function () {
+                                location.reload();
+                            }
+                        );
+                        // setTimeout(function() {
+                        //             window.location.href = "../index.html";
+                        //         }, 5000);
+                        // window.location.href = "https://ais.dotvik.com/sent.html";
+                    } else {
+                        alert(data)
+                    }
+                });
+        }
+
+
+        // function btnshow() {
+        //     document.getElementById("modalOne").style.display = "block";
+        // }
+
+       
+        $(document).ready(function () {
+            $("#Date").datepicker({
+                language: "es",
+                direction: [1, 10],
+                autoclose: true,
+                format: "yyyy-mm-dd",
+                startDate: new Date() 
+            });
+        });
+
+    </script>
+    <!-- Registration demo form  ends here   -->
+
+<script>
+
+ // Brand Active
+ $('.brand-active').slick({
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 400,
+      arrows: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
+
+    /* 2. sticky And Scroll UP */
+    $(window).on('scroll', function () {
+      var scroll = $(window).scrollTop();
+      if (scroll < 400) {
+        $(".header-sticky").removeClass("sticky-bar");
+        $('#back-top').fadeOut(500);
+      } else {
+        $(".header-sticky").addClass("sticky-bar");
+        $('#back-top').fadeIn(500);
+      }
+    });
+  // Scroll Up
+    $('#back-top a').on("click", function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  
+
+/* 3. slick Nav */
+// mobile_menu
+   $(document).ready(function() {
+    var menu = $('ul#navigation');
+    if(menu.length){
+      menu.slicknav({
+        prependTo: ".mobile_menu",
+        closedSymbol: '+',
+        openedSymbol:'-'
+      });
+    }
+  });
+
+    
+/* 3. MainSlider-1 */
+function mainSlider() {
+        var BasicSlider = $('.slider-active');
+        BasicSlider.on('init', function (e, slick) {
+          var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
+          doAnimations($firstAnimatingElements);
+        });
+        BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+          var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+          doAnimations($animatingElements);
+        });
+        BasicSlider.slick({
+          autoplay: false,
+          autoplaySpeed: 10000,
+          dots: false,
+          fade: true,
+          arrows: true,
+          prevArrow: '<button type="button" class="slick-prev"><i class="ti-arrow-left"></i></button>',
+          nextArrow: '<button type="button" class="slick-next"><i class="ti-arrow-right"></i></button>',
+          responsive: [{
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+              }
+            }
+          ]
+        });
+
+        function doAnimations(elements) {
+          var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+          elements.each(function () {
+            var $this = $(this);
+            var $animationDelay = $this.data('delay');
+            var $animationType = 'animated ' + $this.data('animation');
+            $this.css({
+              'animation-delay': $animationDelay,
+              '-webkit-animation-delay': $animationDelay
+            });
+            $this.addClass($animationType).one(animationEndEvents, function () {
+              $this.removeClass($animationType);
+            });
+          });
+        }
+      }
+      mainSlider();
+
+
+</script>
+
+
+<script>
+// Inject button and region selector styles
+var style = document.createElement('style');
+style.innerHTML = `
+    /* Your existing button styles */
+    .btntrial-blue {
+        background-color: #0A57FF;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btntrial-blue:hover {
+        background-color: #bb0b0b;
+    }
+    .hover-blue {
+        background-color: #0A57FF;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .hover-blue:hover {
+        background-color: #bb0b0b;
+    }
+    .hover-red {
+        background-color: #bb0b0b;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .hover-red:hover {
+        background-color: #C00000;
+    }
+    
+    /* Updated Apple-style region selector */
+    .region-selector-container {
+        background: #f5f5f7;
+        padding: 15px 0;
+        font-size: 12px;
+        border-bottom: 1px solid #d2d2d7;
+        width: 100%;
+    }
+    
+    .region-selector-wrapper {
+        max-width: 980px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 22px;
+    }
+    
+    .region-text {
+        color: #1d1d1f;
+        white-space: nowrap;
+    }
+    
+    .region-current {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #06c;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 6px 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.region-current:hover {
+    background-color: #f0f0f5;
+}
+    
+    .region-chevron {
+        margin-left: 5px;
+        font-size: 16px;
+    }
+    
+    .region-dropdown-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+        background: white;
+        border: 1px solid #d2d2d7;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 1000;
+        padding: 15px;
+    }
+    
+    .region-search {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .region-search input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #d2d2d7;
+        border-radius: 18px;
+        font-size: 14px;
+    }
+    
+    .region-list {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    
+    .region-item {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+    
+    .region-item:hover {
+        background-color: #f5f5f7;
+    }
+    
+    .region-item-flag {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+    }
+    
+    .region-item-name {
+        flex-grow: 1;
+        text-align: left;
+        font-size: 14px;
+    }
+    
+    .region-item-currency {
+        color: #86868b;
+        font-size: 12px;
+    }
+.region-buttons {
+    display: flex;
+    gap: 10px;
+    // margin-top: 16px;
+}
+
+#regionCloseBtn,
+#regionContinueBtn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    
+}
+
+#regionCloseBtn {
+    background-color: #e0e0e0;
+    color: #333;
+    margin-right: -138px;
+}
+
+#regionCloseBtn:hover {
+    background-color: #bb0b0b;
+}
+
+#regionContinueBtn {
+    background-color: #bb0b0b;
+    color: white;
+    margin-right: 252px;
+}
+
+#regionContinueBtn:disabled {
+    background-color: #2c3e50;
+    cursor: not-allowed;
+}
+
+#regionContinueBtn:hover:not(:disabled) {
+    background-color: #2c3e50;
+}
+
+
+`;
+document.head.appendChild(style);
+
+// Currency configuration
+const currencyConfig = {
+    'INR': { symbol: '₹', forexRate: 1, pppRate: 1, countries: ['IN'] },
+    'USD': { symbol: '$', forexRate: 0.012, pppRate: 0.025, countries: ['US', 'CA', 'AU'] },
+    'EUR': { symbol: '€', forexRate: 0.011, pppRate: 0.022, countries: ['FR', 'DE', 'IT', 'ES', 'NL', 'BE'] },
+    'GBP': { symbol: '£', forexRate: 0.0095, pppRate: 0.020, countries: ['GB'] },
+    'SGD': { symbol: 'S$', forexRate: 0.016, pppRate: 0.028, countries: ['SG', 'MY', 'HK', 'JP'] },
+    'AED': { symbol: 'د.إ', forexRate: 0.044, pppRate: 0.060, countries: ['AE', 'SA'] },
+    'ZAR': { symbol: 'R', forexRate: 0.21, pppRate: 0.30, countries: ['ZA'] }
+};
+
+// Country and region data with currency mapping
+const countryData = [
+  { code: 'IN', name: 'India', flag: '🇮🇳', currency: 'INR' },
+  { code: 'US', name: 'United States', flag: '🇺🇸', currency: 'USD' },
+  { code: 'GB', name: 'United Kingdom', flag: '🇬🇧', currency: 'GBP' },
+  { code: 'DE', name: 'Germany', flag: '🇩🇪', currency: 'EUR' },
+  { code: 'FR', name: 'France', flag: '🇫🇷', currency: 'EUR' },
+  { code: 'IT', name: 'Italy', flag: '🇮🇹', currency: 'EUR' },
+  { code: 'ES', name: 'Spain', flag: '🇪🇸', currency: 'EUR' },
+  { code: 'CA', name: 'Canada', flag: '🇨🇦', currency: 'USD' },
+  { code: 'AU', name: 'Australia', flag: '🇦🇺', currency: 'USD' },
+  { code: 'JP', name: 'Japan', flag: '🇯🇵', currency: 'SGD' },
+  { code: 'SG', name: 'Singapore', flag: '🇸🇬', currency: 'SGD' },
+  { code: 'AE', name: 'United Arab Emirates', flag: '🇦🇪', currency: 'AED' },
+  { code: 'ZA', name: 'South Africa', flag: '🇿🇦', currency: 'ZAR' },
+  { code: 'OT', name: 'Other Region', flag: 'OR', currency: 'USD' }
+
+];
+
+let currentCurrency = 'INR';
+let currentPrices = { silver: 0, gold: 0, platinum: 0 };
+let currentCountry = countryData.find(c => c.code === 'IN');
+let ipApiCalled = false;
+
+// Check if region was previously selected
+function getStoredRegion() {
+    return localStorage.getItem('userRegion');
+}
+
+function setStoredRegion(countryCode) {
+    localStorage.setItem('userRegion', countryCode);
+}
+
+// Format price using PPP
+function formatPrice(price) {
+    let convertedPrice = price * currencyConfig[currentCurrency].pppRate;
+    let formatted = convertedPrice.toFixed(2);
+    
+    // Remove ".00" only
+    if (formatted.endsWith('.00')) {
+        formatted = formatted.slice(0, -3);
+    }
+
+    return currencyConfig[currentCurrency].symbol + formatted.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+// Update displayed prices
+function updatePrices() {
+    $('.pricesil').html(formatPrice(currentPrices.silver));
+    $('.pricegol').html(formatPrice(currentPrices.gold));
+    $('.pricepla').html(formatPrice(currentPrices.platinum));
+    reRenderAttributeTable();
+}
+
+// *** NEW ***: Function to update the <select> currency dropdown
+function updateCurrencyDropdown(currencyCode) {
+    const currencyDropdownEl = document.getElementById('currencyDropdown');
+    if (currencyDropdownEl) {
+        currencyDropdownEl.value = currencyCode;
+    }
+}
+
+// Detect user location using ipapi.co
+async function detectUserLocation() {
+    const storedRegion = getStoredRegion();
+    const continueBtn = document.getElementById('regionContinueBtn'); // Get the button reference
+
+    if (storedRegion) {
+        const country = countryData.find(c => c.code === storedRegion);
+        if (country) {
+            console.log('Using stored region:', country.code);
+            currentCountry = country;
+            updateRegionDisplay(country);
+            currentCurrency = country.currency;
+            updateCurrencyDropdown(currentCurrency); // Sync dropdown
+            updatePrices();
+
+            // ✅ Enable Continue button
+            if (continueBtn) continueBtn.disabled = false;
+            return;
+        }
+    }
+
+    console.log('No stored region, detecting location...');
+    try {
+        let response = await fetch('https://ipapi.co/json/', {
+            headers: { 'Accept': 'application/json' }
+        });
+        if (!response.ok) throw new Error('HTTPS request failed');
+        const data = await response.json();
+        handleLocationData(data, continueBtn);
+    } catch (httpsError) {
+        console.log('HTTPS request failed, trying HTTP:', httpsError);
+        try {
+            let response = await fetch('http://ipapi.co/json/', {
+                headers: { 'Accept': 'application/json' }
+            });
+            if (!response.ok) throw new Error('HTTP request failed');
+            const data = await response.json();
+            handleLocationData(data, continueBtn);
+        } catch (httpError) {
+            console.error('Both HTTPS and HTTP requests failed:', httpError);
+          const defaultCountry = countryData.find(c => c.code === 'OT'); // Use Other Region
+          currentCountry = defaultCountry;
+          updateRegionDisplay(defaultCountry);
+          currentCurrency = 'USD';
+          updateCurrencyDropdown(currentCurrency); // Sync dropdown
+          setStoredRegion(defaultCountry.code);
+          updatePrices();
+
+          // ✅ Enable Continue button
+          if (continueBtn) continueBtn.disabled = false;
+
+        }
+    }
+}
+
+
+function handleLocationData(data, continueBtn) {
+    const countryCode = data ? data.country : null;
+    const country = countryData.find(c => c.code === countryCode);
+    let targetCountry = country || countryData.find(c => c.code === 'OT'); // Default to Other Region
+
+    console.log('Using country:', targetCountry.name);
+    currentCountry = targetCountry;
+    currentCurrency = targetCountry.currency;
+    updateRegionDisplay(targetCountry);
+    updateCurrencyDropdown(currentCurrency);
+    setStoredRegion(targetCountry.code);
+    updatePrices();
+
+    // ✅ Enable Continue button
+    if (continueBtn) continueBtn.disabled = false;
+}
+
+
+function updateRegionDisplay(country) {
+    console.log('Updating UI for country:', country.name);
+    const currentEl = document.querySelector('.region-current span:first-child');
+    if (currentEl) {
+        currentEl.textContent = country.name;
+    }
+}
+
+// Create region selector HTML
+function createRegionSelector() {
+    // *** UPDATED ***: The region picker modal now has a unique ID 'regionDropdownModal'
+    const regionHTML = `
+    <div class="region-selector-container" id="regionSelectorContainer">
+        <div class="region-selector-wrapper">
+            <div class="region-text">
+                Choose another country or region to see content specific to your location.
+            </div>
+            <div class="region-current" style="margin-left: 75px;">
+                <span>Loading...</span>
+         <span class="region-chevron">&#9662;</span>
+                
+            </div>
+              <button class="regionContinueBtn" id="regionContinueBtn"  disabled>Continue</button>
+            <!-- Buttons -->
+        
+            <button class="regionCloseBtn" id="regionCloseBtn" >&times; </button>
+        </div>
+    </div>
+
+    <div class="region-dropdown-modal" id="regionDropdownModal">
+        <div class="region-search">
+            <input type="text" placeholder="Search for a country or region">
+        </div>
+        <div class="region-list"></div>
+    </div>
+    `;
+    
+    document.body.insertAdjacentHTML('afterbegin', regionHTML);
+
+    // Populate country list
+    const listEl = document.querySelector('.region-list');
+    countryData.forEach(country => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'region-item';
+        itemEl.innerHTML = `
+            <span class="region-item-flag">${country.flag}</span>
+            <span class="region-item-name">${country.name}</span>
+            <span class="region-item-currency">${currencyConfig[country.currency].symbol}</span>
+        `;
+
+        itemEl.addEventListener('click', () => {
+            currentCountry = country;
+            currentCurrency = country.currency;
+            ipApiCalled = true;
+
+            // *** UPDATED ***: Update everything when a new region is selected
+            updateRegionDisplay(country);
+            updateCurrencyDropdown(currentCurrency); // Sync the <select> dropdown
+            setStoredRegion(country.code);
+            updatePrices();
+
+            document.getElementById('regionDropdownModal').style.display = 'none';
+
+            // Enable "Continue" button
+            document.getElementById('regionContinueBtn').disabled = false;
+        });
+
+        listEl.appendChild(itemEl);
+    });
+
+    // Show/hide dropdown modal on click
+    document.querySelector('.region-current').addEventListener('click', function(e) {
+        const dropdown = document.getElementById('regionDropdownModal');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Country search
+    document.querySelector('.region-search input').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const items = document.querySelectorAll('.region-item');
+
+        items.forEach(item => {
+            const name = item.querySelector('.region-item-name').textContent.toLowerCase();
+            item.style.display = name.includes(searchTerm) ? 'flex' : 'none';
+        });
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.region-selector-wrapper') && !e.target.closest('.region-dropdown-modal')) {
+            document.getElementById('regionDropdownModal').style.display = 'none';
+        }
+    });
+
+    // Close button hides the entire region selector
+    document.getElementById('regionCloseBtn').addEventListener('click', function () {
+        document.getElementById('regionSelectorContainer').style.display = 'none';
+    });
+
+    // Continue button hides region selector only if region selected
+    document.getElementById('regionContinueBtn').addEventListener('click', function () {
+        if (currentCountry) {
+            document.getElementById('regionSelectorContainer').style.display = 'none';
+        } else {
+            alert("Please select a region first.");
+        }
+    });
+}
+
+// Handle manual currency override from <select>
+$(document).on('change', '#currencyDropdown', function () {
+    const selectedCurrency = $(this).val();
+    if (currencyConfig[selectedCurrency]) {
+        console.log(`Manual currency override to: ${selectedCurrency}. Region display remains unchanged.`);
+        currentCurrency = selectedCurrency;
+        updatePrices();
+    }
+});
+
+// Convert numeric value only if the attribute is price-related
+function convertAttributeValue(name, value) {
+    let priceAttributes = ['Auditor Extension', 'Audit Executions add-on'];
+    if (priceAttributes.includes(name) && !isNaN(value) && value != "0") {
+        return `Additional ${formatPrice(parseFloat(value))} /user/month`;
+    }
+    return value;
+}
+
+
+// Re-render feature table rows
+function reRenderAttributeTable() {
+    // This function remains the same, no changes needed here.
+    var xhttp = new XMLHttpRequest();
+     xhttp.open("GET", "https://ais.dotvik.com/pricing/read.php", false);
+    // xhttp.open("GET", "http://localhost/ais.dotvik.com/pricing/read.php", false);
+    xhttp.send();
+    var DataA = JSON.parse(xhttp.responseText);
+
+    var tableHTML = "";
+    for (var i = 0; i < DataA.data.length; i++) {
+        let attr = DataA.data[i];
+        tableHTML += "<tr>" +
+            "<td>" + attr.goldplan_attributeName + "</td>" +
+            "<td><div class='resMob' style='font-size: 16px;'>" + convertAttributeValue(attr.goldplan_attributeName, attr.free_attributeValue || '-') + "</div></td>" +
+            "<td><div class='resMob' style='font-size: 16px;'>" + convertAttributeValue(attr.goldplan_attributeName, attr.silver_attributeValue || '-') + "</div></td>" +
+            "<td><div class='resMob' style='font-size: 16px;'>" + convertAttributeValue(attr.goldplan_attributeName, attr.gold_attributeValue || '-') + "</div></td>" +
+            "<td><div class='resMob' style='font-size: 16px;'>" + convertAttributeValue(attr.goldplan_attributeName, attr.platinum_attributeValue || '-') + "</div></td>" +
+            "</tr>";
+    }
+    document.getElementById("datatable").innerHTML = tableHTML;
+}
+
+$(document).ready(function () {
+    // Create and initialize region selector
+    createRegionSelector();
+    
+    // Detect user location
+    detectUserLocation();
+    
+    // Your existing initialization code
+    var xhttp2 = new XMLHttpRequest();
+    xhttp2.open("GET", "https://ais.dotvik.com/pricing/toggle.php", false);
+    // xhttp2.open("GET", "http://localhost/ais.dotvik.com/pricing/toggle.php", false);
+    xhttp2.send();
+    var ToggleDataA = JSON.parse(xhttp2.responseText);
+
+    currentPrices.silver = ToggleDataA.data[1].monthly_price;
+    currentPrices.gold = ToggleDataA.data[2].monthly_price;
+    currentPrices.platinum = ToggleDataA.data[3].monthly_price;
+
+    updatePlanDisplays();
+    updatePrices();
+
+    function updatePlanDisplays() {
+        var yeartext = "/standard/billed annually";
+        var freetext = "/trial for one month";
+
+        document.getElementById('freeVal').innerHTML = `
+            <br><div class='freeCs' style='color:#da7700fa; font-size: 30px;'>${ToggleDataA.data[0].plan_sku_code}</div>
+            <div style='font-weight: lighter;'>${freetext}</div><br>
+            <div><button class='btntrial-blue CsMob' onclick='yourFunction()'>START FREE TRIAL</button></div>`;
+
+        document.getElementById('silverVal').innerHTML = `
+            <div class='silCs'>${ToggleDataA.data[1].plan_sku_code}</div>
+            <div class='pricesil' style='font-size: 30px;'>${formatPrice(currentPrices.silver)}</div>
+            <div class='textM' style='font-weight: lighter;'>${yeartext}</div><br>
+            <div><button class='hover-blue csBuy' onclick='yourFunction()'>BUY NOW</button></div>`;
+
+        document.getElementById('goldVal').innerHTML = `
+            <div class='golCs'>${ToggleDataA.data[2].plan_sku_code}<br></div>
+            <div class='pricegol' style='font-size: 30px;'>${formatPrice(currentPrices.gold)}<br></div>
+            <div class='textM' style='font-weight: lighter;'>${yeartext}</div><br>
+            <div><button class='hover-red csBuy' onclick='yourFunction()'>BUY NOW</button></div>`;
+
+        document.getElementById('platinumVal').innerHTML = `
+            <br><div class='platCs'>${ToggleDataA.data[3].plan_sku_code}<br></div>
+            <div class='pricepla' style='font-size: 30px;'>${formatPrice(currentPrices.platinum)}<br></div>
+            <div class='textM' style='font-weight: lighter;'>${yeartext}</div><br>
+            <div><button class='hover-blue csBuy' onclick='yourFunction()'>BUY NOW</button></div><br>`;
+    }
+});
+
+function yourFunction() {
+    console.log("Button clicked");
+}
+</script>
+
+
+    <script src="./AIS.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/owl/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
