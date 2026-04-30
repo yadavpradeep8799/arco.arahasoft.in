@@ -69,7 +69,7 @@ h3 {
 }
 
 .btn.btn-primary:hover {
-  background-color: #0C4B7A;
+  background-color: #017fb5;
 }
 
 .navbar-nav li a:hover, 
@@ -271,11 +271,11 @@ section {
 }
 
 .navbar-right li.active a {
-  background-color: #0C4B7A;
+  background-color: #C52727;
   color:white;
 }
 .navbar-right a.active {
-  background-color: #0C4B7A;
+  background-color: #C52727;
   color:white;
 }
 .navbar-brand h1 {
@@ -994,7 +994,7 @@ ul.address {
 }
 
 #footer .social-icons ul li a {
-  background-color: #0C4B7A;
+  background-color: #C52727;
   border-radius: 4px;
   line-height: 33px;
 }
@@ -1036,7 +1036,7 @@ ul.address {
 }
 
 #about-social-icons .social-icons ul li a {
-  background-color: #0C4B7A;
+  background-color: #C52727;
   border-radius: 4px;
   line-height: 33px;
 }
@@ -1122,13 +1122,13 @@ position: fixed;
 				}
 		
 .profile-info h2 {
-	color: #149E5B;
+	color: #C52727;
 	  padding-bottom: 12px;
 				}
 
 		
 .profile-info h3 {
-	color: #149E5B;
+	color: #C52727;
 	  padding-bottom: 12px;
 				}
 				
@@ -1140,7 +1140,7 @@ position: fixed;
 			}
 
 .profile-info a {
-	 color: #149E5B;
+	 color: #C52727;
 		}
 .profile-info i {
 	    padding: 15px 35px 0px 35px;
