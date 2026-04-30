@@ -930,13 +930,46 @@
 }
 
 @media (max-width: 992px) {
-  .wb-grid { grid-template-columns: repeat(2, 1fr); }
-  .wb-benefits { grid-template-columns: 1fr; }
+  .wb-section { padding: 60px 0; }
+  .wb-header { margin-bottom: 40px; }
+  .wb-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 36px; }
+  .wb-benefits { grid-template-columns: 1fr; gap: 16px; }
   .wb-title { font-size: 32px; }
+  .wb-subtitle { font-size: 15px; }
 }
-@media (max-width: 576px) {
-  .wb-grid { grid-template-columns: 1fr; }
-  .wb-title { font-size: 26px; }
+@media (max-width: 768px) {
+  .wb-section { padding: 48px 0; }
+  .wb-header { margin-bottom: 32px; }
+  .wb-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 30px; }
+  .wb-card { padding: 24px 16px; border-radius: 12px; }
+  .wb-card__icon { width: 52px; height: 52px; font-size: 22px; border-radius: 12px; margin-bottom: 14px; }
+  .wb-card__title { font-size: 15px; margin-bottom: 6px; }
+  .wb-card__text { font-size: 13px; }
+  .wb-title { font-size: 28px; }
+  .wb-subtitle { font-size: 14px; }
+  .wb-benefits__item { padding: 20px 18px; border-radius: 12px; }
+  .wb-benefits__icon { width: 42px; height: 42px; min-width: 42px; font-size: 18px; }
+  .wb-benefits__content h4 { font-size: 15px; }
+  .wb-benefits__content p { font-size: 13px; }
+}
+@media (max-width: 480px) {
+  .wb-section { padding: 36px 0; }
+  .wb-container { padding: 0 16px; }
+  .wb-header { margin-bottom: 24px; }
+  .wb-grid { grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
+  .wb-card { padding: 20px 16px; display: flex; flex-direction: row; align-items: center; gap: 14px; text-align: left; }
+  .wb-card__icon { margin: 0; min-width: 48px; width: 48px; height: 48px; font-size: 20px; border-radius: 12px; }
+  .wb-card__title { font-size: 14px; margin-bottom: 4px; }
+  .wb-card__text { font-size: 12px; line-height: 1.4; }
+  .wb-card::after { display: none; }
+  .wb-card:hover { transform: none; box-shadow: 0 4px 16px rgba(44,62,80,.08); }
+  .wb-title { font-size: 24px; line-height: 1.3; }
+  .wb-subtitle { font-size: 13px; }
+  .wb-benefits { gap: 12px; }
+  .wb-benefits__item { padding: 18px 14px; gap: 12px; border-radius: 10px; }
+  .wb-benefits__icon { width: 40px; height: 40px; min-width: 40px; font-size: 16px; border-radius: 10px; }
+  .wb-benefits__content h4 { font-size: 14px; }
+  .wb-benefits__content p { font-size: 12px; }
 }
 
 /* ========== Panels Section (Tabbed) ========== */
